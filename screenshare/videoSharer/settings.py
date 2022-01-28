@@ -41,6 +41,7 @@ SITE_ID = 1
 
 INSTALLED_APPS = [
     'videos',
+    'profiles',
     'crispy_forms',
 
     'django.contrib.sites',
@@ -148,3 +149,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Sign In Redirect
 LOGIN_REDIRECT_URL = 'index'
+
+# Additions to Sign Up Form
+ACCOUNT_SIGNUP_FORM_CLASS = 'profiles.forms.ProfileForm'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
