@@ -1,5 +1,5 @@
 """
-WSGI config for screenshare project.
+WSGI config for Screen Fair project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
