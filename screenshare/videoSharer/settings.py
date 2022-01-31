@@ -154,3 +154,8 @@ LOGIN_REDIRECT_URL = 'index'
 ACCOUNT_SIGNUP_FORM_CLASS = 'profiles.forms.ProfileForm'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
