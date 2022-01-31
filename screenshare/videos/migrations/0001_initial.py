@@ -16,17 +16,17 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.CreateModel(
-            name='Category',
-            fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=30)),
-            ],
-            options={
-                'verbose_name': 'Category',
-                'verbose_name_plural': 'Categories',
-            },
-        ),
+        # migrations.CreateModel(
+        #     name='Category',
+        #     fields=[
+        #         ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+        #         ('name', models.CharField(max_length=30)),
+        #     ],
+        #     options={
+        #         'verbose_name': 'Category',
+        #         'verbose_name_plural': 'Categories',
+        #     },
+        # ),
         migrations.CreateModel(
             name='Video',
             fields=[
@@ -36,7 +36,7 @@ class Migration(migrations.Migration):
                 ('video_file', models.FileField(upload_to='uploads/video_files', validators=[django.core.validators.FileExtensionValidator(allowed_extensions=['mp4'])])),
                 ('thumbnail', models.FileField(upload_to='uploads/thumbnails', validators=[django.core.validators.FileExtensionValidator(allowed_extensions=['png', 'jpg', 'jpeg'])])),
                 ('date_posted', models.DateTimeField(default=django.utils.timezone.now)),
-                ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='videos.category')),
+                # ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='videos.category')),
                 ('uploader', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),
